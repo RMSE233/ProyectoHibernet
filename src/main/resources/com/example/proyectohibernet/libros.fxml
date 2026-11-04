@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectohibernate3.LibroController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+
+                <Label text="Registro de libros">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+
+
+                <VBox spacing="8.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="50.0" text="Título:" />
+                                <TextField fx:id="txtTitulo" prefHeight="26.0" prefWidth="514.0" promptText="Título del libro" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="50.0" text="Autor:" />
+                                <TextField fx:id="txtAutor" promptText="Autor del libro" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="50.0" text="Año:" />
+                                <TextField fx:id="txtAnio" promptText="Año de publicación" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="50.0" text="Precio:" />
+                                <TextField fx:id="txtPrecio" promptText="Precio del libro" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar libro" />
+                        <Button fx:id="btnCargar" mnemonicParsing="false" text="Cargar libros" />
+                    </children>
+                </HBox>
+
+
+                <TableView fx:id="tableLibros" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="colTitulo" prefWidth="180.0" text="Título" />
+                        <TableColumn fx:id="colAutor" prefWidth="180.0" text="Autor" />
+                        <TableColumn fx:id="colAnio" prefWidth="80.0" text="Año" />
+                        <TableColumn fx:id="colPrecio" prefWidth="90.0" text="Precio" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

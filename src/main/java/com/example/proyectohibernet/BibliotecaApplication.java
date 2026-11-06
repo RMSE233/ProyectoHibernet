@@ -12,7 +12,7 @@ public class BibliotecaApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        // El FXML está en resources/com/example/proyectohibernet/, el mismo paquete que esta clase
+
         URL fxml = BibliotecaApplication.class.getResource("libros.fxml");
         if (fxml == null) {
             throw new IOException("No se encontró libros.fxml. Debe estar en "

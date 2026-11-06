@@ -19,8 +19,8 @@ public class Libro {
     @Column(name = "autor", nullable = false, length = 100)
     private String autor;
 
-    @Column(name = "anio_publicaciones", nullable = false)
-    private int anioPublicaciones;
+    @Column(name = "anio_publicacion", nullable = false)
+    private Integer anioPublicacion;
 
     @Column(name = "precio", nullable = false, precision = 12, scale = 2)
     private BigDecimal precio;
@@ -32,7 +32,7 @@ public class Libro {
                  int anioPublicaciones, BigDecimal precio) {
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicaciones = anioPublicaciones;
+        this.anioPublicacion = anioPublicaciones;
         this.precio = precio;
     }
 
@@ -41,7 +41,7 @@ public class Libro {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicaciones = anioPublicaciones;
+        this.anioPublicacion = anioPublicaciones;
         this.precio = precio;
     }
 
@@ -70,11 +70,11 @@ public class Libro {
     }
 
     public int getAnioPublicaciones() {
-        return anioPublicaciones;
+        return anioPublicacion;
     }
 
     public void setAnioPublicaciones(int anioPublicaciones) {
-        this.anioPublicaciones = anioPublicaciones;
+        this.anioPublicacion = anioPublicaciones;
     }
 
     public BigDecimal getPrecio() {

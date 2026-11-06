@@ -11,19 +11,16 @@
         <class>com.example.proyectohibernet.model.Libro</class>
 
         <properties>
-            <!-- PostgreSQL -->
+
             <property name="jakarta.persistence.jdbc.driver"
                       value="org.postgresql.Driver"/>
 
-            <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:postgresql://localhost:5432/bdibbiblioteca"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bdbiblioteca"/>
 
             <property name="jakarta.persistence.jdbc.user"
                       value="postgres"/>
 
-            <!-- JPAUtil proporciona la contraseña desde DB_PASSWORD. -->
 
-            <!-- Hibernate -->
             <property name="hibernate.hbm2ddl.auto"
                       value="validate"/>
 

@@ -1,7 +1,7 @@
 package com.example.proyectohibernet.dao;
 
 import com.example.proyectohibernet.database.JPAUtil;
-import com.example.proyectohibernet.model.Libro;
+import com.example.proyectohibernet.model.libro;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class LibroDAO {
 
-    public void guardar(LibroDAO libroDAO) {
+    public void guardar(libro libro) {
         EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -17,7 +17,7 @@ public class LibroDAO {
             // Iniciar la transacción en PostgreSQL
             tx.begin();
             // Decirle a Hibernate que prepare la persistencia del objeto
-            em.persist(libroDAO);
+            em.persist(libro);
             // Confirmar los cambios en la base de datos
             tx.commit();
         } catch (RuntimeException ex) {

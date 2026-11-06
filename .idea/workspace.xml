@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f6c26bf-ad47-47d6-a694-35e81469a46c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/com/example/proyectohibernet/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/com/example/proyectohibernet/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/com/example/proyectohibernet/Launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/com/example/proyectohibernet/dao/LibroDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/com/example/proyectohibernet/database/JPAUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/com/example/proyectohibernet/model/libro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/resources/com/example/proyectohibernet/META-INF/persistance.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/resources/com/example/proyectohibernet/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoHibernate3/src/main/resources/com/example/proyectohibernet/libros.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="9f6c26bf-ad47-47d6-a694-35e81469a46c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +52,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
@@ -95,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1793752779315</updated>
       <workItem from="1793752783578" duration="4973000" />
-      <workItem from="1793924670447" duration="685000" />
+      <workItem from="1793924670447" duration="997000" />
     </task>
     <servers />
   </component>

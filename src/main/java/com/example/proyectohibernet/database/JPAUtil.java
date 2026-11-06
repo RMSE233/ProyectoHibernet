@@ -11,26 +11,27 @@ public class JPAUtil {
 
     private static EntityManagerFactory emf;
 
-    public static synchronized void iniciar() {
-        if (emf == null) {
-            String password = System.getenv("DB_PASSWORD");
+    private JPAUtil() {
+    }
 
+    public static synchronized void iniciar() {
+        if (emf == null || !emf.isOpen()) {
+            String password = System.getenv("BD_PASSWORD");
             if (password == null || password.isBlank()) {
-                throw new RuntimeException(
-                        "DB_PASSWORD environment variable is empty"
-                );
+                throw new IllegalStateException("La variable de entorno BD_PASSWORD no está definida o está vacía.");
             }
 
             Map<String, Object> properties = new HashMap<>();
             properties.put("jakarta.persistence.jdbc.password", password);
-
             emf = Persistence.createEntityManagerFactory("bibliotecaPU", properties);
         }
     }
 
-    public static EntityManagerFactory getEntityManagerFactory() {
-        iniciar();
-        return emf;
+    public static EntityManager getEntityManager() {
+        if (emf == null || !emf.isOpen()) {
+            iniciar();
+        }
+        return emf.createEntityManager();
     }
 
     public static synchronized void cerrar() {
@@ -38,8 +39,5 @@ public class JPAUtil {
             emf.close();
             emf = null;
         }
-    }
-
-    public static EntityManager getEntityManager() {
     }
 }

@@ -1,16 +1,17 @@
 package com.example.proyectohibernet.model;
+
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "libro", schema = "catalogos")
-public class libro {
+public class Libro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @Column(name = "titulo", nullable = false, length = 150)
     private String titulo;
@@ -18,29 +19,37 @@ public class libro {
     @Column(name = "autor", nullable = false, length = 100)
     private String autor;
 
-    @Column(name = "anio_publicacion", nullable = false)
-    private int anioPublicacion;
+    @Column(name = "anio_publicaciones", nullable = false)
+    private int anioPublicaciones;
 
-    @Column(name = "precio", nullable = false, precision = 10, scale = 2)
+    @Column(name = "precio", nullable = false, precision = 12, scale = 2)
     private BigDecimal precio;
 
-    public libro(long id, String titulo, String autor, int anioPublicacion, BigDecimal precio) {
-        this.id = id;
+    public Libro() {
+    }
+
+    public Libro(String titulo, String autor,
+                 int anioPublicaciones, BigDecimal precio) {
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicacion = anioPublicacion;
+        this.anioPublicaciones = anioPublicaciones;
         this.precio = precio;
     }
 
-    public libro() {
-
+    public Libro(Long id, String titulo, String autor,
+                 int anioPublicaciones, BigDecimal precio) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anioPublicaciones = anioPublicaciones;
+        this.precio = precio;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -60,12 +69,12 @@ public class libro {
         this.autor = autor;
     }
 
-    public int getAnioPublicacion() {
-        return anioPublicacion;
+    public int getAnioPublicaciones() {
+        return anioPublicaciones;
     }
 
-    public void setAnioPublicacion(int anioPublicacion) {
-        this.anioPublicacion = anioPublicacion;
+    public void setAnioPublicaciones(int anioPublicaciones) {
+        this.anioPublicaciones = anioPublicaciones;
     }
 
     public BigDecimal getPrecio() {

@@ -1,39 +1,112 @@
 package com.example.proyectohibernet.dao;
 
-import com.example.proyectohibernet.database.JPAUtil;
-import com.example.proyectohibernet.model.libro;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import com.example.proyectohibernet.model.Libro;
+import com.example.proyectohibernet.database.JPAUtil;
 
 import java.util.List;
 
 public class LibroDAO {
 
-    public void guardar(libro libro) {
-        EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+    public void guardar(Libro libro) {
+        EntityManager em = JPAUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
-            // Iniciar la transacción en PostgreSQL
             tx.begin();
-            // Decirle a Hibernate que prepare la persistencia del objeto
+
             em.persist(libro);
-            // Confirmar los cambios en la base de datos
+
             tx.commit();
+
         } catch (RuntimeException ex) {
             if (tx.isActive()) {
                 tx.rollback();
             }
+
             throw ex;
+
         } finally {
             em.close();
         }
     }
 
-    public List<LibroDAO> listar() {
-        EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+    public List<Libro> listar() {
+        EntityManager em = JPAUtil.getEntityManager();
+
         try {
-            return em.createQuery("SELECT l FROM  l ORDER BY l.id", LibroDAO.class).getResultList();
+            return em.createQuery(
+                    "SELECT l FROM Libro l ORDER BY l.id",
+                    Libro.class
+            ).getResultList();
+
+        } finally {
+            em.close();
+        }
+    }
+
+    public boolean modificar(Libro libro) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+
+            Libro libroBD = em.find(Libro.class, libro.getId());
+
+            if (libroBD == null) {
+                tx.rollback();
+                return false;
+            }
+
+            libroBD.setTitulo(libro.getTitulo());
+            libroBD.setAutor(libro.getAutor());
+            libroBD.setAnioPublicaciones(
+                    libro.getAnioPublicaciones());
+            libroBD.setPrecio(libro.getPrecio());
+
+            tx.commit();
+            return true;
+
+        } catch (RuntimeException ex) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+
+            throw ex;
+
+        } finally {
+            em.close();
+        }
+    }
+
+    public boolean eliminar(Long id) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+
+            Libro libroBD = em.find(Libro.class, id);
+
+            if (libroBD == null) {
+                tx.rollback();
+                return false;
+            }
+
+            em.remove(libroBD);
+
+            tx.commit();
+            return true;
+
+        } catch (RuntimeException ex) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+
+            throw ex;
+
         } finally {
             em.close();
         }

@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f6c26bf-ad47-47d6-a694-35e81469a46c" name="Changes" comment="" />
+    <list default="true" id="9f6c26bf-ad47-47d6-a694-35e81469a46c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/BibliotecaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/controller/LibroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/dao/LibroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/dao/LibroDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/database/JPAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/database/JPAUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/model/libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectohibernet/model/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectohibernet/META-INF/persistance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectohibernet/libros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectohibernet/libros.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +26,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -50,6 +62,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BibliotecaApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.Launcher.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -60,6 +75,34 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Róger Sequeira\IdeaProjects\ProyectoHibernet\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BibliotecaApplication" type="Application" factoryName="Application" temporary="true">
+      <envs>
+        <env name="BD_PASSWORD" value="123" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.example.proyectohibernet.Launcher" />
+      <module name="ProyectoHibernet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.proyectohibernet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BibliotecaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1793752779315</updated>
       <workItem from="1793752783578" duration="4973000" />
-      <workItem from="1793924670447" duration="997000" />
+      <workItem from="1793924670447" duration="6663000" />
     </task>
     <servers />
   </component>

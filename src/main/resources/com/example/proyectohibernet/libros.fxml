@@ -21,13 +21,13 @@
                         <HBox alignment="CENTER_LEFT" spacing="10.0">
                             <children>
                                 <Label prefWidth="50.0" text="Título:" />
-                                <TextField fx:id="txtTitulo" prefHeight="26.0" prefWidth="514.0" promptText="Título del libro" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="txtTitulo" prefHeight="26.0" prefWidth="514.0" promptText="Título del libroDAO" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" spacing="10.0">
                             <children>
                                 <Label prefWidth="50.0" text="Autor:" />
-                                <TextField fx:id="txtAutor" promptText="Autor del libro" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="txtAutor" promptText="Autor del libroDAO" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" spacing="10.0">
@@ -39,7 +39,7 @@
                         <HBox alignment="CENTER_LEFT" spacing="10.0">
                             <children>
                                 <Label prefWidth="50.0" text="Precio:" />
-                                <TextField fx:id="txtPrecio" promptText="Precio del libro" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="txtPrecio" promptText="Precio del libroDAO" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                     </children>
@@ -48,7 +48,7 @@
 
                 <HBox spacing="10.0">
                     <children>
-                        <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar libro" />
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar libroDAO" />
                         <Button fx:id="btnCargar" mnemonicParsing="false" text="Cargar libros" />
                     </children>
                 </HBox>

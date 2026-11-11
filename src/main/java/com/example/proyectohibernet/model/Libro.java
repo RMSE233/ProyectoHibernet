@@ -1,7 +1,6 @@
 package com.example.proyectohibernet.model;
 
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
 @Entity
@@ -20,31 +19,39 @@ public class Libro {
     private String autor;
 
     @Column(name = "anio_publicacion", nullable = false)
-    private Integer anioPublicacion;
+    private int anioPublicacion;
 
-    @Column(name = "precio", nullable = false, precision = 12, scale = 2)
+    @Column(name = "precio", nullable = false, precision = 10, scale = 2)
     private BigDecimal precio;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
+
+    // Constructor vacío obligatorio para JPA
     public Libro() {
     }
 
-    public Libro(String titulo, String autor,
-                 int anioPublicaciones, BigDecimal precio) {
+    // Constructor sin ID (ideal para inserciones/guardar)
+    public Libro(String titulo, String autor, int anioPublicacion, BigDecimal precio, Categoria categoria) {
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicacion = anioPublicaciones;
+        this.anioPublicacion = anioPublicacion;
         this.precio = precio;
+        this.categoria = categoria;
     }
 
-    public Libro(Long id, String titulo, String autor,
-                 int anioPublicaciones, BigDecimal precio) {
+    // Constructor completo
+    public Libro(Long id, String titulo, String autor, int anioPublicacion, BigDecimal precio, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicacion = anioPublicaciones;
+        this.anioPublicacion = anioPublicacion;
         this.precio = precio;
+        this.categoria = categoria;
     }
 
+    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -69,12 +76,12 @@ public class Libro {
         this.autor = autor;
     }
 
-    public int getAnioPublicaciones() {
+    public int getAnioPublicacion() {
         return anioPublicacion;
     }
 
-    public void setAnioPublicaciones(int anioPublicaciones) {
-        this.anioPublicacion = anioPublicaciones;
+    public void setAnioPublicacion(int anioPublicacion) {
+        this.anioPublicacion = anioPublicacion;
     }
 
     public BigDecimal getPrecio() {
@@ -83,5 +90,25 @@ public class Libro {
 
     public void setPrecio(BigDecimal precio) {
         this.precio = precio;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", anioPublicacion=" + anioPublicacion +
+                ", precio=" + precio +
+                ", categoria=" + (categoria != null ? categoria.getId() : null) +
+                '}';
     }
 }

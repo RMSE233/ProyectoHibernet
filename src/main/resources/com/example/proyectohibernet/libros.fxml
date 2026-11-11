@@ -34,12 +34,17 @@
             <TextField fx:id="txtPrecio" promptText="Precio del libro" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #b0bec5; -fx-padding: 7 10;" HBox.hgrow="ALWAYS" />
         </HBox>
 
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label minWidth="70.0" prefWidth="70.0" style="-fx-font-weight: bold; -fx-text-fill: #37474f;" text="Categoría:" />
+            <ComboBox fx:id="cmbCategoria" promptText="Seleccione una categoría" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #b0bec5; -fx-padding: 3 5;" HBox.hgrow="ALWAYS" />
+        </HBox>
+
     </VBox>
 
     <HBox spacing="10.0">
 
         <Button onAction="#guardarLibro" style="-fx-background-color: #2e9e5b; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 9 18; -fx-cursor: hand;" text="Guardar libro" />
-   
+
         <Button fx:id="btnModificar" disable="true" onAction="#modificarLibro" style="-fx-background-color: #2f80ed; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 9 18; -fx-cursor: hand;" text="Modificar libro" />
 
         <Button fx:id="btnEliminar" disable="true" onAction="#eliminarLibro" style="-fx-background-color: #e5484d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 9 18; -fx-cursor: hand;" text="Eliminar libro" />
@@ -50,7 +55,7 @@
 
     </HBox>
 
-    <TableView fx:id="tablaLibros" prefHeight="350.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #cfd8dc;" VBox.vgrow="ALWAYS">
+    <TableView fx:id="tblLibros" prefHeight="350.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #cfd8dc;" VBox.vgrow="ALWAYS">
 
         <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -71,6 +76,8 @@
             <TableColumn fx:id="colAnio" prefWidth="90.0" style="-fx-alignment: CENTER;" text="Año" />
 
             <TableColumn fx:id="colPrecio" prefWidth="110.0" style="-fx-alignment: CENTER-RIGHT;" text="Precio" />
+
+            <TableColumn fx:id="colCategoria" prefWidth="150.0" text="Categoría" />
 
         </columns>
 
